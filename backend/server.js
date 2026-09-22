@@ -55,7 +55,7 @@ app.use(errorHandler);
 
 // Start server
 if (process.env.NODE_ENV !== 'test') {
-  app.listen(PORT, () => {
+  app.listen(PORT, '0.0.0.0', () => {
     console.log(`========================================`);
     console.log(` InternGuard Backend Running on Port ${PORT}`);
     console.log(` Health Check: http://localhost:${PORT}/api/health`);
