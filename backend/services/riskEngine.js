@@ -148,13 +148,26 @@ const INDICATOR_RULES = [
 function detectPaymentRequest(text) {
   const lowerText = text.toLowerCase();
 
+  // Explicit negative statements should NOT be treated as payment requests.
+  const negativePaymentPatterns = [
+    /no\s+(?:registration\s+fee|application\s+fee|payment|deposit|fee)\s+(?:is\s+)?required/,
+    /(?:registration\s+fee|application\s+fee|payment|deposit|fee)\s+(?:is\s+)?not\s+required/,
+    /(?:no|without)\s+(?:upfront\s+)?payment/,
+    /(?:no|without)\s+(?:registration|application|training|joining)\s+fee/
+  ];
+
+  for (const pattern of negativePaymentPatterns) {
+    if (pattern.test(lowerText)) {
+      return [];
+    }
+  }
+
   const paymentPatterns = [
     /\bregistration\s+fee\b/,
     /\bsecurity\s+deposit\b/,
     /\bprocessing\s+fee\b/,
     /\bonboarding\s+fee\b/,
     /\brefundable\s+fee\b/,
-    /\bpayment\s+required\b/,
     /\benrollment\s+fee\b/,
     /\blaptop\s+fee\b/,
     /\btraining\s+fee\b/,
