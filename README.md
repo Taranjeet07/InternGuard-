@@ -157,51 +157,6 @@ GET  /api/reports/company/:name
 
 ---
 
-## Team Division
-
-| Member | Responsibility |
-|---|---|
-| 1 — Frontend | React UI, landing page, analysis screen, results and history |
-| 2 — Backend | Node/Express APIs, authentication and AI integration |
-| 3 — AI | Prompts, structured outputs, indicator extraction and explanations |
-| 4 — Security | URL analysis, scam indicators, domain/company verification and testing |
-| 5 — Database & Integration | MongoDB, reports, deployment, integration and testing |
-
----
-
-## 12-Day Development Plan
-
-| Day | Deliverable |
-|---|---|
-| 1 | Finalize problem, architecture, UI wireframes, GitHub and task allocation |
-| 2 | Build React/Tailwind landing and analysis screens |
-| 3 | Build Express backend, APIs and MongoDB connection |
-| 4 | Integrate AI analysis and structured JSON output |
-| 5 | Implement transparent risk-scoring engine |
-| 6 | Implement URL/security analysis |
-| 7 | Implement screenshot upload and OCR |
-| 8 | Build results dashboard and explanations |
-| 9 | Add community reporting and history |
-| 10 | Complete end-to-end integration |
-| 11 | Test suspicious and legitimate-looking examples; fix false positives and UI issues |
-| 12 | Finalize PPT, demo, deployment, backup video and presentation practice |
-
----
-
-## Live Demo Script
-
-1. Show a realistic recruitment message asking for an upfront fee.
-2. Upload the screenshot to InternGuard.
-3. Demonstrate OCR extracting the message and URL.
-4. Show the analysis result: **86/100 — High Risk**.
-5. Reveal the indicators one by one: payment request, urgency, suspicious URL, identity mismatch.
-6. Show the AI explanation and recommended verification actions.
-7. Explain that the system identifies risk signals rather than claiming certainty.
-
-> **Core demo line:** *"InternGuard doesn't ask students to blindly trust AI. It shows them why an opportunity deserves further verification."*
-
----
-
 ## Scalability & Future Scope
 
 ```
@@ -211,24 +166,3 @@ Student tool → Campus/Placement platform → Recruitment protection layer → 
 Future additions: browser extension, multilingual scam detection, email/WhatsApp integrations (where technically and legally appropriate), college placement dashboards, recruiter verification, real-time threat intelligence, and mobile apps.
 
 ---
-
-## Judging Criteria Alignment
-
-| Criterion | InternGuard Demonstration |
-|---|---|
-| Innovation & Creativity | Multimodal screenshot/text/URL analysis with explainable risk signals |
-| Problem-Solving | Addresses a concrete problem faced by students and fresh graduates |
-| Technical Implementation | AI + OCR + rules + URL/security signals + backend + database |
-| UI/UX & Design | Simple "Check Before You Trust" workflow with clear risk explanations |
-| Scalability & Impact | Expands from individual students to colleges and placement ecosystems |
-| Presentation & Demonstration | Highly visual live demo: screenshot → analysis → explainable report → action |
-
----
-
-## Final Pitch
-
-> Every student wants an internship. But finding an opportunity isn't the only problem — knowing whether you can trust it is. InternGuard is an AI-powered recruitment safety platform that analyzes messages, screenshots, and URLs, identifies suspicious indicators, and explains the evidence behind the risk. It helps students verify before they pay, click, or share sensitive information.
-
-**InternGuard — Verify Before You Trust.**
-
-*Product principle: Build a small number of reliable features extremely well. The strongest MVP is Screenshot → OCR → AI → Explainable Risk Report, supported by URL/security analysis.*
